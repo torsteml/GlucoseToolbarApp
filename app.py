@@ -7,10 +7,10 @@ def get_authenticated_client():
     return Dexcom(os.getenv("DEXCOM_USERNAME", default=None), os.getenv("DEXCOM_PASSWORD", default=None), ous=True)
 
 
-class GlucoseApp(rumps.App):
+class GlucoseToolbarApp(rumps.App):
 
     def __init__(self):
-        super(GlucoseApp, self).__init__(name="Glucose")
+        super(GlucoseToolbarApp, self).__init__(name="GlucoseToolbarApp")
 
         self.bg = None
         self.dexcom_client = get_authenticated_client()
@@ -32,4 +32,4 @@ class GlucoseApp(rumps.App):
 
 
 if __name__ == '__main__':
-    GlucoseApp().run()
+    GlucoseToolbarApp().run()

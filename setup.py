@@ -12,7 +12,7 @@ OPTIONS = {
 
 setup(
     app=APP,
-    name='Glucose',
+    name='GlucoseToolbarApp',
     options={'py2app': OPTIONS},
-    setup_requires=['py2app'], install_requires=['rumps', 'requests']
+    setup_requires=['py2app'], install_requires=['rumps']
 )
